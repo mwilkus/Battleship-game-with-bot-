@@ -1,4 +1,6 @@
 from print_functions import *
+from time import sleep
+from os import system
 from data_convert import *
 from checking import drown
 from json import loads

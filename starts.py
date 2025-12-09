@@ -14,7 +14,6 @@ def start(inp1="",inp2="",e=False,z=0):
                 try:
                     if not e:
                         system("clear")
-                        print(data["ships"][str(i+1)]["count"])
                         print_map(map1)
                         print(f"Choose place of your l={i+1} ship ({j} left)")
                         print("Choose start id")
