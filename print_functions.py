@@ -1,6 +1,5 @@
-from os import system
-from time import sleep
 from data_convert import ships1,ships2,in_to_st
+from checking import is_win
 
 def print_map(arr, e=False):
     print("   ", end="")
@@ -35,18 +34,3 @@ def print_s():
     is_win(count_of_ships, count_of_ships_e)
     print(f"You: #-{count_of_ships[1]},  ##-{count_of_ships[2]},  ###-{count_of_ships[3]},  ####-{count_of_ships[4]},  #####-{count_of_ships[5]}")
     print(f"Enemy: #-{count_of_ships_e[1]},  ##-{count_of_ships_e[2]},  ###-{count_of_ships_e[3]},  ####-{count_of_ships_e[4]},  #####-{count_of_ships_e[5]}")
-
-def is_win(count_of_ships, count_of_ships_e):
-    you=0;enemy=0
-    for i in count_of_ships.values(): you+=i
-    for i in count_of_ships_e.values(): enemy+=i
-    if enemy==0:
-        system("clear")
-        print("YOU WIN!")
-        sleep(3)
-        exit(0)
-    elif you==0:
-        system("clear")
-        print("YOU LOSE!")
-        sleep(3)
-        exit(0)
